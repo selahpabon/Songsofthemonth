@@ -1,0 +1,316 @@
+body {
+    background-color: #bed5b2;
+    font-family: "berthold-baskerville-pro", sans-serif;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+
+    color: #c48fc3;
+    font-size: 2.5rem;
+    font-family: "erotique", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.main {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+
+    align-items: flex-start;
+}
+
+.songs {
+    flex: 2 1 600px;
+}
+
+.songs ul{
+    padding: 0;
+    margin: 0;
+
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 1rem;
+}
+
+.songs li {
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+
+    flex: 1 1 200px;
+    max-width: 210px;
+    min-height: 290px;
+    padding: 1rem;
+    border-radius: 8px;
+
+    text-align: center;
+    list-style: none;
+
+    border: 3px solid;
+    color:beige;
+}
+
+.song1 {
+    background: #842327;
+    width: 200px;
+}
+
+.song2 {
+    background: #121f31;
+    width: 200px;
+}
+
+.song3 {
+    background: #c50011;
+    width: 200px;
+}
+
+.song4 {
+    background: #5d542a;
+    width: 200px;
+}
+
+.song5 {
+    background: #0a457b;
+    width: 200px;
+}
+
+.song6 {
+    background: #b99c76;
+    width: 200px;
+}
+
+.song7 {
+    background: #9ec3d3;
+    width: 200px;
+}
+
+.song8 {
+    background: #0d7dc8;
+    width: 200px;
+}
+
+.song9 {
+    background: #da7b8b;
+    width: 200px;
+}
+
+.song10 {
+    background: #5d3c36;
+    width: 200px;
+}
+
+.song11 {
+    background: #b23f10;
+    width: 200px;
+}
+
+.song12 {
+    background: #515e37;
+    width: 200px;
+}   
+
+.song13 {
+    background: #2c6186;
+    width: 200px;
+}   
+
+.song14 {
+    background: #eb85b3;
+    width: 200px;
+}
+.song15 {
+    background: #f37758;
+    width: 200px;
+}
+
+.song16 {
+    background: #70cf78;
+    width: 200px;
+}
+
+.song17 {
+    background: #607d96;
+    width: 200px;
+}
+
+.song18 {
+    background: #9a5171;
+    width: 200px;
+}
+
+.song19 {
+    background: #907db0;
+    width: 200px;
+}
+
+.song20 {
+    background: #c77668;
+    width: 200px;
+}
+
+/* --- HEX CODE (anchor) centered + hidden by default --- */
+.hexcode {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.95);
+  font-size: 16px;
+  font-weight: 700;
+  color: #ffffff;           /* adjust if needed */
+  text-align: center;
+  text-decoration: none;    /* remove underline */
+  white-space: nowrap;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.45);
+
+  opacity: 0;               /* invisible by default */
+  transition: opacity 0.45s ease, transform 0.45s ease;
+  z-index: 50;
+  pointer-events: none;     /* not clickable until shown */
+}
+
+/* When visible */
+.hexcode.show {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+  pointer-events: auto;     /* make link clickable */
+
+  transition: all 0.3s ease;
+}
+
+.hexcode.show:hover{
+    color: rgb(255, 230, 89);
+    text-shadow: 1px 1px 4px white;
+}
+
+/* Visible content (exclude .hexcode) */
+.songs li img,
+.songs li .caption,
+.songs li .songlink {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 0.45s ease, transform 0.45s ease;
+}
+
+/* Force-hide class (use !important so it overrides other rules) */
+.hidden {
+  opacity: 0 !important;
+  transform: scale(0.98) !important;
+  pointer-events: none !important;
+}
+
+.songs li img {
+    width: 100%;
+    height: 200px;            /* fixed height for all images */
+    object-fit: cover;        /* crop/scale image nicely */
+    margin-bottom: 0.5rem;
+}
+
+.caption {
+    margin: 0;
+    font-size: 14px; 
+    min-height: 36px;
+}
+
+.songlink {
+    display: inline-block;
+    
+    padding-top: 1.5rem;
+    padding-bottom: 0.25rem;
+
+    font-size: 13px;
+    text-decoration: none;
+    color: rgb(255, 230, 89);
+
+    transition: text-shadow 0.7s ease;
+}
+
+.songlink:hover {
+    text-shadow: 2px 2px 4px white;
+}
+
+.songinput {
+    flex: 1 1 200px; 
+    padding: 1rem;
+    border-radius: 8px;
+    position: sticky;
+    top: 45px;
+
+    max-width: 350px;
+
+    background: #9cb68e;
+    color: #fff;
+}
+
+.songinput h2 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    font-weight: 400px;
+    font-style: normal;
+
+    text-align: center;
+}
+
+.songinput p {
+    font-size: 12px;
+}
+
+.songinput form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.songinput input {
+    padding: 0.5rem;
+    border-radius: 4px;
+    border: none;
+    font-size: 0.9rem;
+}
+
+.songinput input:focus {
+    outline: 2px solid rgb(235, 220, 134); /* change to your preferred color */
+    outline-offset: 0.5px;         /* optional: space between outline and input */
+}
+
+.songinput button {
+    padding: 0.5rem;
+    border-radius: 4px;
+    border: none;
+    background: #c48fc3;
+    color: #fff;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.songinput button:hover {
+    background: #a062a2;
+}
+
+#toggleImages {
+    position: fixed;      /* Fixes the button to the viewport */
+    bottom: 10px;         /* Distance from bottom of screen */
+    right: 10px;           /* Distance from left of screen */
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    border: none;
+    background: #c48fc3;
+    color: #fff;
+    font-size: 0.9rem;
+    cursor: pointer;
+
+    z-index: 1000;        /* Keeps it above other content */
+    transition: background 0.3s ease;
+
+}
+
+#toggleImages:hover {
+    background: #a062a2;
+}
